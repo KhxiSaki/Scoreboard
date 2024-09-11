@@ -33,6 +33,7 @@
             <th>Score 6</th>
             <th>Score 7</th>
             <th>Total Score</th>
+            <th>Action</th>
         </tr>
     </table>
 </html>
@@ -40,5 +41,7 @@
 <?php
 include 'db_connection.php';
 
-
+ini_set('display_errors', 1);
+ini_set('display_startup_errors', 1);
+error_reporting(E_ALL);
 ?>
