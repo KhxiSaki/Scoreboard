@@ -55,6 +55,7 @@ try {
     <nav>
         <ul>
             <li><a href="index.html">Home</a></li>
+            <li><a href=edituserdetails.php>Edit User Details</a></li>
             <li><a href="centrefire_scoreboard.php">Centre Fire Scoreboard</a></li>
             <li><a href="platescore_scoreboard.php">Plate Scoreboard</a></li>
         </ul>
