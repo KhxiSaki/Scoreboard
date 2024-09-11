@@ -17,8 +17,6 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
         $_POST['score7'],
     ];
 
-    $total_score = array_sum($scores);
-
     try {
         // Insert or update the participant's scores
         $pdo->beginTransaction();
@@ -36,7 +34,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
                 'score_name' => 'Score' . ($index + 1),
             ]);
         }
-
+        $total_score = array_sum($scores);
         // Update the centrefire table
         $update_stmt = $pdo->prepare("INSERT INTO centrefire (Participant_ID, TotalScore) VALUES (:participant_id, :total_score)
                                       ON DUPLICATE KEY UPDATE TotalScore = :total_score");
