@@ -46,7 +46,8 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
         ]);
 
         $pdo->commit();
-
+  // Redirect back to the index page after successful submission
+  header("Location: index.html?success=1");
         echo "<p>Scores submitted successfully.</p>";
     } catch (PDOException $e) {
         $pdo->rollBack();

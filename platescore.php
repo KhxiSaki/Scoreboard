@@ -30,7 +30,8 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
         $stmt = $pdo->prepare("INSERT INTO score (ScoreName, Score, Participant_ID) VALUES (?, ?, ?)");
         $stmt->execute([$score[0], $score[1], $Group_ID]);
     }
-
+  // Redirect back to the index page after successful submission
+  header("Location: index.html?success=1");
     echo "Plate scores saved successfully!";
 }
 ?>
